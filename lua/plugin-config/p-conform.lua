@@ -10,7 +10,7 @@ conform.setup({
 		-- 对于没有统一标准编码风格的编程语言，禁用 "format_on_save lsp_fallback"
 		-- 你可以在这里添加额外的语言，或者为已禁用的语言重新启用它
 		-- languages here or re-enable it for the disabled ones.
-		local disable_filetypes = { c = true, cpp = true }
+		local disable_filetypes = { c = true }
 		return {
 			-- -- 设置格式化操作的超时时间为 500 毫秒
 			timeout_ms = 500,

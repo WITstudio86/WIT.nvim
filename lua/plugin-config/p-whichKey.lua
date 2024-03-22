@@ -21,5 +21,6 @@ which_key.register({
 	["<leader>lc"] = { name = "[C]ode :代码", _ = "which_key_ignore" },
 	["<leader>lr"] = { name = "[R]eset :重置", _ = "which_key_ignore" },
 	["<leader>e"] = { name = "[E] : 打开文件树", _ = "which_key_ignore" },
-	["<leader>b"] = { name = "[b]uffer : buffer操作", _ = "which_key_ignore" },
+	["<leader>b"] = { name = "[B]uffer : buffer操作", _ = "which_key_ignore" },
+	["<leader>m"] = { name = "[M]arkdown : markdown相关操作", _ = "which_key_ignore" },
 })

@@ -89,6 +89,8 @@ map("n", "<leader>b]", ":BufferLineCycleNext<CR>", { desc = "[→] :下一个 bu
 map("n", "<leader>bx", ":bdelete<CR>", { desc = "[C]lose: 关闭当前 buffer" })
 
 -- NOTE: 插件快捷键映射
+map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "[E] :打开/关闭文件树" })
+map("n", "<leader>mv", ":MarkdownPreview<CR>", { desc = "pre[V]iew : 打开 meekdown 预览" })
 local pluginKeys = {}
 -- NOTE: telescope 模糊检索工具
 pluginKeys.telescope = function()
@@ -200,7 +202,6 @@ pluginKeys.lspconfig = function(event)
 	end
 end
 
-map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "[E] :打开/关闭文件树" })
 -- NOTE: 文件树列表快捷键
 pluginKeys.nvimTreeList = {
 	-- 打开文件或文件夹
@@ -224,4 +225,8 @@ pluginKeys.nvimTreeList = {
 	{ key = "s", action = "system_open" },
 }
 
+--NOTE: markdown 粘贴图片
+pluginKeys.imgClip = {
+	{ "<leader>mp", "<cmd>PasteImage<cr>", desc = "[P]aste :粘贴图片到 markdown " },
+}
 return pluginKeys

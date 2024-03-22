@@ -23,7 +23,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	-- NOTE: 主题样式
 	{
-		"sainnhe/everforest",
+		"WITstudio86/everforest",
 		config = function()
 			vim.cmd("colorscheme everforest")
 		end,
@@ -166,6 +166,23 @@ require("lazy").setup({
 
 	-- NOTE: 配合 telescope 搜索项目
 	{ "ahmedkhalf/project.nvim" },
+
+	--NOTE: markdown 预览
+	{
+		"WITstudio86/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { "markdown" },
+		build = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	},
+
+	-- NOTE:  markdown粘贴图片
+	{
+		"WITstudio86/img-clip.nvim",
+		event = "BufEnter",
+		keys = require("mappings").imgClip,
+	},
 }, {
 	-- 字体图标
 	ui = {
