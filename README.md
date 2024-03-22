@@ -24,6 +24,7 @@ git clone https://github.com/WITstudio86/WIT.nvim.git $env:USERPROFILE\AppData\L
 
 ## 目录结构
 
+```
 .
 ├── README.md
 ├── init.lua
@@ -35,3 +36,4 @@ git clone https://github.com/WITstudio86/WIT.nvim.git $env:USERPROFILE\AppData\L
     ├── plugin-config  插件配置的文件夹
     ├── plugins.lua  插件管理文件
     └── yankHightLight.lua  基本配置(赋值文本高亮)
+```
