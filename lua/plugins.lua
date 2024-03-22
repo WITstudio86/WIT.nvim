@@ -23,7 +23,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	-- NOTE: 主题样式
 	{
-		"WITstudio86/everforest",
+		"sainnhe/everforest",
 		config = function()
 			vim.cmd("colorscheme everforest")
 		end,
