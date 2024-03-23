@@ -89,7 +89,12 @@ map("n", "<leader>b]", ":BufferLineCycleNext<CR>", { desc = "[→] :下一个 bu
 map("n", "<leader>bx", ":bdelete<CR>", { desc = "[C]lose: 关闭当前 buffer" })
 
 -- NOTE: 插件快捷键映射
+
+-- coderunner
+map("n", "<leader>cr", ":RunCode<CR>", { desc = "[R]unner :通过 coderunner 快捷执行" })
+-- 文件树开关
 map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "[E] :打开/关闭文件树" })
+-- markdown 预览
 map("n", "<leader>mv", ":MarkdownPreview<CR>", { desc = "pre[V]iew : 打开 meekdown 预览" })
 local pluginKeys = {}
 -- NOTE: telescope 模糊检索工具

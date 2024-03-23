@@ -31,71 +31,71 @@ require("lazy").setup({
 
 	-- "gc" to comment visual regions/lines
 	-- NOTE: 快捷注释 , gcc gbc 等
-	{ "numToStr/Comment.nvim", opts = require("plugin-config.p-comment") },
+	{ "WITstudio86/Comment.nvim", opts = require("plugin-config.p-comment") },
 
 	-- Adds git related signs to the gutter, as well as utilities for managing changes
 	-- NOTE: 装订线中的 git 提示
-	{ "lewis6991/gitsigns.nvim" },
+	{ "WITstudio86/gitsigns.nvim" },
 
 	-- Useful plugin to show you pending keybinds.
 	-- Sets the loading event to 'VimEnter'
 	-- 在 vim 被打开的时候就加载
 	-- NOTE: 快捷键查看提示
-	{ "folke/which-key.nvim", event = "VimEnter" },
+	{ "WITstudio86/which-key.nvim", event = "VimEnter" },
 
 	-- NOTE: 文件快捷搜索工具
 	{
-		"nvim-telescope/telescope.nvim",
+		"WITstudio86/telescope.nvim",
 		event = "VimEnter",
-		branch = "0.1.x",
+		-- branch = "0.1.x",
 		dependencies = {
-			"nvim-lua/plenary.nvim",
+			"WITstudio86/plenary.nvim",
 			{
-				"nvim-telescope/telescope-fzf-native.nvim",
+				"WITstudio86/telescope-fzf-native.nvim",
 				build = "make",
 				cond = function()
 					return vim.fn.executable("make") == 1
 				end,
 			},
-			{ "nvim-telescope/telescope-ui-select.nvim" },
-			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
+			{ "WITstudio86/telescope-ui-select.nvim" },
+			{ "WITstudio86/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 		},
 	},
 	-- LSP Configuration & Plugins
 	-- NOTE: lsp 配置
 	{
-		"neovim/nvim-lspconfig",
+		"WITstudio86/nvim-lspconfig",
 		dependencies = {
 			-- 自动安装 LSP 和相关工具到 Neovim 的标准路径
 			-- Mason 是一个工具管理器，用于安装和管理 LSP 服务器
-			"williamboman/mason.nvim",
+			"WITstudio86/mason.nvim",
 			-- Mason 的 LSP 配置插件
-			"williamboman/mason-lspconfig.nvim",
+			"WITstudio86/mason-lspconfig.nvim",
 			-- Mason 工具安装器，用于安装 LSP 服务器
-			"WhoIsSethDaniel/mason-tool-installer.nvim",
+			"WITstudio86/mason-tool-installer.nvim",
 
 			-- 提供 LSP 状态更新的实用工具.
 			-- -- Fidget.nvim 提供 LSP 状态的实时更新
 			-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-			{ "j-hui/fidget.nvim", opts = {} },
+			{ "WITstudio86/fidget.nvim", opts = {} },
 
 			-- neodev 配置 Lua LSP
 			-- 用于 Neovim 配置、运行时和插件的完成、注释和签名
-			{ "folke/neodev.nvim", opts = {} },
+			{ "WITstudio86/neodev.nvim", opts = {} },
 		},
 	},
 
 	-- NOTE: 自动格式化
-	{ "stevearc/conform.nvim" },
+	{ "WITstudio86/conform.nvim" },
 
 	-- NOTE: 自动完成
 	{
-		"hrsh7th/nvim-cmp",
+		"WITstudio86/nvim-cmp",
 		event = "InsertEnter",
 		dependencies = {
 			-- Snippet 引擎及其关联的 nvim-cmp 源
 			{
-				"L3MON4D3/LuaSnip",
+				"WITstudio86/LuaSnip",
 				build = (function()
 					-- 代码段中的正则表达式支持需要构建步骤.
 					-- WARN: 许多 Windows 环境不支持此步骤.
@@ -117,55 +117,55 @@ require("lazy").setup({
 					-- },
 				},
 			},
-			"saadparwaiz1/cmp_luasnip",
+			"WITstudio86/cmp_luasnip",
 
 			-- 添加其他补全功能.
 			--  默认情况下，NVIM-CMP 不会随所有源一起提供。
 			--  它们被拆分为多个存储库，用于维护目的。.
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-path",
+			"WITstudio86/cmp-nvim-lsp",
+			"WITstudio86/cmp-path",
 		},
 	},
 
 	-- Highlight todo, notes, etc in comments
 	-- NOTE: 高亮的特殊注释
 	{
-		"folke/todo-comments.nvim",
+		"WITstudio86/todo-comments.nvim",
 		event = "VimEnter",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		dependencies = { "WITstudio86/plenary.nvim" },
 		opts = { signs = false },
 	},
 
 	-- NOTE: 小型插件的集合
-	{ "echasnovski/mini.nvim" },
+	{ "WITstudio86/mini.nvim" },
 
 	-- NOTE: 代码高亮
 	{
-		"nvim-treesitter/nvim-treesitter",
+		"WITstudio86/nvim-treesitter",
 		build = ":TSUpdate",
 	},
 
 	-- NOTE: 左侧文件树
-	{ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" },
+	{ "WITstudio86/nvim-tree.lua", requires = "WITstudio86/nvim-web-devicons" },
 
 	-- NOTE: buffer 在顶部标签的形式出现
 	{
-		"akinsho/bufferline.nvim",
-		requires = { "kyazdani42/nvim-web-devicons" },
+		"WITstudio86/bufferline.nvim",
+		requires = { "WITstudio86/nvim-web-devicons" },
 	},
 
 	-- NOTE: 启动页面
 	{
-		"nvimdev/dashboard-nvim",
+		"WITstudio86/dashboard-nvim",
 		event = "VimEnter",
 		config = function()
 			require("plugin-config.p-dashboard")
 		end,
-		dependencies = { { "nvim-tree/nvim-web-devicons" } },
+		dependencies = { { "WITstudio86/nvim-web-devicons" } },
 	},
 
 	-- NOTE: 配合 telescope 搜索项目
-	{ "ahmedkhalf/project.nvim" },
+	{ "WITstudio86/project.nvim" },
 
 	--NOTE: markdown 预览
 	{
@@ -183,6 +183,12 @@ require("lazy").setup({
 		event = "BufEnter",
 		keys = require("mappings").imgClip,
 	},
+
+	-- NOTE: 代码运行
+	{ "WITstudio86/code_runner.nvim", config = true },
+
+	-- NOTE: 代码 AI
+	{ "WITstudio86/tabnine-nvim", build = "./dl_binaries.sh" },
 }, {
 	-- 字体图标
 	ui = {
