@@ -19,8 +19,8 @@ map("n", "<leader>cc", "zc", { desc = "[ZC] :折叠代码块" })
 map("n", "<leader>co", "zo", { desc = "[ZO] :展开代码块" })
 
 -- NOTE: 诊断映射
-map("n", "[d", vim.diagnostic.goto_prev, { desc = "[D]iagnostic 跳转到上一个诊断" })
-map("n", "]d", vim.diagnostic.goto_next, { desc = "[D]iagnostic 跳转到下一个诊断" })
+map("n", "<leader>d[", vim.diagnostic.goto_prev, { desc = "[D]iagnostic 跳转到上一个诊断" })
+map("n", "<leader>d]", vim.diagnostic.goto_next, { desc = "[D]iagnostic 跳转到下一个诊断" })
 map("n", "<leader>de", vim.diagnostic.open_float, { desc = "[D]iagnostic[E]rror :显示诊断错误信息" })
 map("n", "<leader>dl", vim.diagnostic.setloclist, { desc = "[D]iagnostic[L]ist :显示诊断列表" })
 
@@ -181,7 +181,7 @@ pluginKeys.lspconfig = function(event)
 	lspMap("<leader>lca", vim.lsp.buf.code_action, "[C]ode [A]ction :自动代码操作")
 
 	-- 查看悬停文档
-	lspMap("<leader>lh", vim.lsp.buf.hover, "[H]over Documentation :查看悬停文档")
+	lspMap("<leader>lh", vim.lsp.buf.hover, "[H]over Documentation :查看悬停")
 
 	-- WARN: This is not Goto Definition, this is Goto Declaration.
 	--  For example, in C this would take you to the header.

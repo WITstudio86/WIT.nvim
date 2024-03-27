@@ -8,6 +8,14 @@
 - 快捷键中文提示,且在一个配置文件中
 - lazy.vim管理插件
 
+## 功能列表
+- 语言服务
+- 代码高亮
+- AI 代码补全
+- coderunner 代码快速执行
+- 模糊查找工具
+- markdown 预览和图片快速插入工具
+
 ## install
 
 ### MAC / Linux
@@ -35,5 +43,5 @@ git clone https://github.com/WITstudio86/WIT.nvim.git $env:USERPROFILE\AppData\L
     ├── mappings.lua  按键映射文件
     ├── plugin-config  插件配置的文件夹
     ├── plugins.lua  插件管理文件
-    └── yankHightLight.lua  基本配置(赋值文本高亮)
+    └── yankHightLight.lua  基本配置(赋值复制 高亮)
 ```
