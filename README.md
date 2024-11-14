@@ -1,6 +1,9 @@
 # WIT.nvim
 
+> 24年11月14日 ==fork 的repo已经清理 , 需要将配置文件中插件的repo名字手动更改==
+
 > 一个基于 kickstart 的 nvim 配置
+
 
 - 中文注释
 - 基于 kickstart
@@ -20,19 +23,19 @@
 
 ### MAC / Linux
 
-```bash
+```   ' ' 'bash   ”“bash
 git clone https://github.com/WITstudio86/WIT.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
-```
+```   ' ' '
 
-### Window
+### Window   # # #窗口
 
-```bash
+```bash   ”“bash   ”“bash
 git clone https://github.com/WITstudio86/WIT.nvim.git $env:USERPROFILE\AppData\Local\nvim\
-```
+```   ' ' '
 
 ## 目录结构
 
-```
+```   ' ' '
 .
 ├── README.md
 ├── init.lua
